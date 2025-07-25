@@ -229,6 +229,9 @@
                   pasti juga bangga banget dengan apa yang kamu capai hari ini. 💞
                 </p>
               </div>
+              <a href="https://drive.google.com/drive/folders/1K2tWvReNBCijSC8fBjYRqVFF8bF0G2zm?usp=drive_link"target="_blank"class="btn btn-primary px-4 py-2"style="background-color: #ff69b4; border: none; color: white; font-weight: bold;">
+                    🎁 Buka ini yaa 🎁
+              </a>
             </div>
           </div>
           <div class="text-center">
@@ -255,13 +258,21 @@
     <!-- aos -->
     <script>
       document.getElementById('envelopeBtn').addEventListener('click', function () {
-      const content = document.getElementById('envelopeContent');
-      if (content.style.display === 'none' || content.style.display === '') {
-      content.style.display = 'block';
-      } else {
-      content.style.display = 'none';
-      }
-    });
+        const content = document.getElementById('envelopeContent');
+        if (content.style.display === 'none' || content.style.display === '') {
+          content.style.display = 'block';
+          setTimeout(() => {
+            content.style.opacity = '1';
+            content.style.transform = 'scale(1)';
+          }, 10); // kasih delay kecil agar transisi aktif
+        } else {
+          content.style.opacity = '0';
+          content.style.transform = 'scale(0.95)';
+          setTimeout(() => {
+            content.style.display = 'none';
+          }, 500); // delay sesuai waktu transisi
+        }
+      });
     </script>
     <!-- gsap -->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
